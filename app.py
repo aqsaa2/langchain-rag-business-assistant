@@ -483,7 +483,7 @@ else:
 
                         # Display the updated tree with expanders
                         df = save_and_display_as_csv(personas, user_stories, gherkin_scenarios)
-                        # display_tree_with_expanders()
+                        display_tree_with_expanders()
 
     except Exception as e:
         logger.error(f"Error in main chat interface: {e}")
