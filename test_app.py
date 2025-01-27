@@ -55,11 +55,12 @@ collection = chroma_client.get_or_create_collection(name="my_collection")
 os.environ["USER_AGENT"] = "myagent"
 DB_DOCS_LIMIT = 40
 
-XAI_API_KEY = os.getenv("XAI_API_KEY")
-client = OpenAI(
-    api_key=XAI_API_KEY,
-    base_url="https://api.x.ai/v1",
-)
+# XAI_API_KEY = os.getenv("XAI_API_KEY")
+# client = OpenAI(
+#     api_key=XAI_API_KEY,
+#     base_url="https://api.x.ai/v1",
+# )
+
 google_api_key = os.environ["GOOGLE_API_KEY"]
 LLM_CALL_DELAY = int(os.environ.get("LLM_CALL_DELAY", 1))
 INITIAL_LLM_CALL_DELAY = int(os.environ.get("INITIAL_LLM_CALL_DELAY", 1))
