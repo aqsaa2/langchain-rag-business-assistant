@@ -18,9 +18,9 @@ from test_app import (
     get_stored_data,
     get_user_responses_from_db,
 )
-import pysqlite3
+__import__('pysqlite3')
 import sys
-sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import chromadb
 from chromadb import PersistentClient
 
