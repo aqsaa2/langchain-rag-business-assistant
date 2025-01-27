@@ -6,6 +6,9 @@ import time
 import uuid
 import logging
 import pandas as pd
+import pysqlite3
+import sys
+import chromadb
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema import HumanMessage, AIMessage
 from langchain_community.vectorstores.chroma import Chroma
@@ -18,10 +21,9 @@ from test_app import (
     get_stored_data,
     get_user_responses_from_db,
 )
-
-import chromadb
 from chromadb import PersistentClient
 
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
