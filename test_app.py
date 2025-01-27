@@ -42,7 +42,7 @@ from langchain.schema import HumanMessage, AIMessage
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-import chroma
+import chromadb
 from chromadb import PersistentClient
 
 logging.basicConfig(level=logging.INFO)
