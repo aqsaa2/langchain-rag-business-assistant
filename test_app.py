@@ -40,6 +40,9 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema import HumanMessage, AIMessage
 from chromadb import PersistentClient
+import pysqlite3
+import sys
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
