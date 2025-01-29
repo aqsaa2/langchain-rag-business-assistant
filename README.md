@@ -46,3 +46,6 @@ The application follows these steps:
     *   Generate user stories for each persona.
     *   Generate Gherkin scenarios for each user story.
 4.  Users can download the generated artifacts as a CSV file.
+
+
+Test the app on this link: https://langchain-rag-business-assistant-y8cnnhb2zfcvmjpw6nkxoc.streamlit.app/
